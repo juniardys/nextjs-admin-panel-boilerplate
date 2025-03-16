@@ -1,4 +1,4 @@
-# Next.js App Router Boilerplate
+# Next.js Admin Panel Boilerplate
 
 This is a [Next.js](https://nextjs.org) boilerplate created by [JuunS](https://github.com/juniardys)
 
