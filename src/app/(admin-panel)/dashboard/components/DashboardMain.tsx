@@ -93,7 +93,7 @@ const DashboardMain: React.FC = () => {
       y: {
         formatter: function (value: number, { seriesIndex }: { seriesIndex: number }) {
           if (seriesIndex === 1) {
-            return `${value} SOL`;
+            return `$${value}`;
           }
           return value.toString();
         },
