@@ -13,7 +13,7 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ withSidebarButton = true, pageTitle, isSidebarShowed, setSidebarShow }) => {
-  const { user } = useUserStore();
+  const { user, logout } = useUserStore();
 
   const handleSidebarButtonClick = () => {
     if (setSidebarShow) setSidebarShow(true);
@@ -62,8 +62,15 @@ const Navbar: React.FC<NavbarProps> = ({ withSidebarButton = true, pageTitle, is
             </div>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuItem className="cursor-pointer" onClick={() => { }}>Settings</DropdownMenuItem>
-            <DropdownMenuItem className="cursor-pointer" onClick={() => { }}>Logout</DropdownMenuItem>
+            {/* <DropdownMenuItem className="cursor-pointer" onClick={() => { }}>Settings</DropdownMenuItem> */}
+            <DropdownMenuItem
+              className="cursor-pointer"
+              onClick={() => {
+                logout();
+              }}
+            >
+              Logout
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
